@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C83807DE1C06A7BB008CCE53 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C83807DD1C06A7BB008CCE53 /* main.m */; };
+		C83807E11C06A7BB008CCE53 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C83807E01C06A7BB008CCE53 /* AppDelegate.m */; };
+		C83807E41C06A7BB008CCE53 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C83807E31C06A7BB008CCE53 /* ViewController.m */; };
+		C83807E71C06A7BB008CCE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83807E51C06A7BB008CCE53 /* Main.storyboard */; };
+		C83807E91C06A7BB008CCE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83807E81C06A7BB008CCE53 /* Assets.xcassets */; };
+		C83807EC1C06A7BB008CCE53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C83807EA1C06A7BB008CCE53 /* LaunchScreen.storyboard */; };
+		C83807F71C06A7BB008CCE53 /* BTN__Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C83807F61C06A7BB008CCE53 /* BTN__Tests.m */; };
+		C83808021C06A7BB008CCE53 /* BTN__UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C83808011C06A7BB008CCE53 /* BTN__UITests.m */; };
+		C83808111C06A7E9008CCE53 /* btnbadgevalue.m in Sources */ = {isa = PBXBuildFile; fileRef = C83808101C06A7E9008CCE53 /* btnbadgevalue.m */; };
+		C83808141C06B066008CCE53 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = C83808131C06B066008CCE53 /* UIView+Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C83807F31C06A7BB008CCE53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C83807D11C06A7BB008CCE53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C83807D81C06A7BB008CCE53;
+			remoteInfo = "BTN角标";
+		};
+		C83807FE1C06A7BB008CCE53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C83807D11C06A7BB008CCE53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C83807D81C06A7BB008CCE53;
+			remoteInfo = "BTN角标";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C83807D91C06A7BB008CCE53 /* BTN角标.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BTN角标.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83807DD1C06A7BB008CCE53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C83807DF1C06A7BB008CCE53 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C83807E01C06A7BB008CCE53 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C83807E21C06A7BB008CCE53 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C83807E31C06A7BB008CCE53 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C83807E61C06A7BB008CCE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C83807E81C06A7BB008CCE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C83807EB1C06A7BB008CCE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C83807ED1C06A7BB008CCE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C83807F21C06A7BB008CCE53 /* BTN角标Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BTN角标Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83807F61C06A7BB008CCE53 /* BTN__Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTN__Tests.m; sourceTree = "<group>"; };
+		C83807F81C06A7BB008CCE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C83807FD1C06A7BB008CCE53 /* BTN角标UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BTN角标UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C83808011C06A7BB008CCE53 /* BTN__UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BTN__UITests.m; sourceTree = "<group>"; };
+		C83808031C06A7BB008CCE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C838080F1C06A7E9008CCE53 /* btnbadgevalue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btnbadgevalue.h; sourceTree = "<group>"; };
+		C83808101C06A7E9008CCE53 /* btnbadgevalue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btnbadgevalue.m; sourceTree = "<group>"; };
+		C83808121C06B066008CCE53 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		C83808131C06B066008CCE53 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C83807D61C06A7BB008CCE53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83807EF1C06A7BB008CCE53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83807FA1C06A7BB008CCE53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C83807D01C06A7BA008CCE53 = {
+			isa = PBXGroup;
+			children = (
+				C83807DB1C06A7BB008CCE53 /* BTN角标 */,
+				C83807F51C06A7BB008CCE53 /* BTN角标Tests */,
+				C83808001C06A7BB008CCE53 /* BTN角标UITests */,
+				C83807DA1C06A7BB008CCE53 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C83807DA1C06A7BB008CCE53 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C83807D91C06A7BB008CCE53 /* BTN角标.app */,
+				C83807F21C06A7BB008CCE53 /* BTN角标Tests.xctest */,
+				C83807FD1C06A7BB008CCE53 /* BTN角标UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C83807DB1C06A7BB008CCE53 /* BTN角标 */ = {
+			isa = PBXGroup;
+			children = (
+				C83807DF1C06A7BB008CCE53 /* AppDelegate.h */,
+				C83807E01C06A7BB008CCE53 /* AppDelegate.m */,
+				C83807E21C06A7BB008CCE53 /* ViewController.h */,
+				C83807E31C06A7BB008CCE53 /* ViewController.m */,
+				C838080F1C06A7E9008CCE53 /* btnbadgevalue.h */,
+				C83808101C06A7E9008CCE53 /* btnbadgevalue.m */,
+				C83808121C06B066008CCE53 /* UIView+Extension.h */,
+				C83808131C06B066008CCE53 /* UIView+Extension.m */,
+				C83807E51C06A7BB008CCE53 /* Main.storyboard */,
+				C83807E81C06A7BB008CCE53 /* Assets.xcassets */,
+				C83807EA1C06A7BB008CCE53 /* LaunchScreen.storyboard */,
+				C83807ED1C06A7BB008CCE53 /* Info.plist */,
+				C83807DC1C06A7BB008CCE53 /* Supporting Files */,
+			);
+			path = "BTN角标";
+			sourceTree = "<group>";
+		};
+		C83807DC1C06A7BB008CCE53 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C83807DD1C06A7BB008CCE53 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C83807F51C06A7BB008CCE53 /* BTN角标Tests */ = {
+			isa = PBXGroup;
+			children = (
+				C83807F61C06A7BB008CCE53 /* BTN__Tests.m */,
+				C83807F81C06A7BB008CCE53 /* Info.plist */,
+			);
+			path = "BTN角标Tests";
+			sourceTree = "<group>";
+		};
+		C83808001C06A7BB008CCE53 /* BTN角标UITests */ = {
+			isa = PBXGroup;
+			children = (
+				C83808011C06A7BB008CCE53 /* BTN__UITests.m */,
+				C83808031C06A7BB008CCE53 /* Info.plist */,
+			);
+			path = "BTN角标UITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C83807D81C06A7BB008CCE53 /* BTN角标 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C83808061C06A7BB008CCE53 /* Build configuration list for PBXNativeTarget "BTN角标" */;
+			buildPhases = (
+				C83807D51C06A7BB008CCE53 /* Sources */,
+				C83807D61C06A7BB008CCE53 /* Frameworks */,
+				C83807D71C06A7BB008CCE53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BTN角标";
+			productName = "BTN角标";
+			productReference = C83807D91C06A7BB008CCE53 /* BTN角标.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C83807F11C06A7BB008CCE53 /* BTN角标Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C83808091C06A7BB008CCE53 /* Build configuration list for PBXNativeTarget "BTN角标Tests" */;
+			buildPhases = (
+				C83807EE1C06A7BB008CCE53 /* Sources */,
+				C83807EF1C06A7BB008CCE53 /* Frameworks */,
+				C83807F01C06A7BB008CCE53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C83807F41C06A7BB008CCE53 /* PBXTargetDependency */,
+			);
+			name = "BTN角标Tests";
+			productName = "BTN角标Tests";
+			productReference = C83807F21C06A7BB008CCE53 /* BTN角标Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C83807FC1C06A7BB008CCE53 /* BTN角标UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C838080C1C06A7BB008CCE53 /* Build configuration list for PBXNativeTarget "BTN角标UITests" */;
+			buildPhases = (
+				C83807F91C06A7BB008CCE53 /* Sources */,
+				C83807FA1C06A7BB008CCE53 /* Frameworks */,
+				C83807FB1C06A7BB008CCE53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C83807FF1C06A7BB008CCE53 /* PBXTargetDependency */,
+			);
+			name = "BTN角标UITests";
+			productName = "BTN角标UITests";
+			productReference = C83807FD1C06A7BB008CCE53 /* BTN角标UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C83807D11C06A7BB008CCE53 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = xiong;
+				TargetAttributes = {
+					C83807D81C06A7BB008CCE53 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 569Q5C25QK;
+					};
+					C83807F11C06A7BB008CCE53 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 569Q5C25QK;
+						TestTargetID = C83807D81C06A7BB008CCE53;
+					};
+					C83807FC1C06A7BB008CCE53 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 569Q5C25QK;
+						TestTargetID = C83807D81C06A7BB008CCE53;
+					};
+				};
+			};
+			buildConfigurationList = C83807D41C06A7BB008CCE53 /* Build configuration list for PBXProject "BTN角标" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C83807D01C06A7BA008CCE53;
+			productRefGroup = C83807DA1C06A7BB008CCE53 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C83807D81C06A7BB008CCE53 /* BTN角标 */,
+				C83807F11C06A7BB008CCE53 /* BTN角标Tests */,
+				C83807FC1C06A7BB008CCE53 /* BTN角标UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C83807D71C06A7BB008CCE53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83807EC1C06A7BB008CCE53 /* LaunchScreen.storyboard in Resources */,
+				C83807E91C06A7BB008CCE53 /* Assets.xcassets in Resources */,
+				C83807E71C06A7BB008CCE53 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83807F01C06A7BB008CCE53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83807FB1C06A7BB008CCE53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C83807D51C06A7BB008CCE53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83808141C06B066008CCE53 /* UIView+Extension.m in Sources */,
+				C83807E41C06A7BB008CCE53 /* ViewController.m in Sources */,
+				C83807E11C06A7BB008CCE53 /* AppDelegate.m in Sources */,
+				C83808111C06A7E9008CCE53 /* btnbadgevalue.m in Sources */,
+				C83807DE1C06A7BB008CCE53 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83807EE1C06A7BB008CCE53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83807F71C06A7BB008CCE53 /* BTN__Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C83807F91C06A7BB008CCE53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C83808021C06A7BB008CCE53 /* BTN__UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C83807F41C06A7BB008CCE53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C83807D81C06A7BB008CCE53 /* BTN角标 */;
+			targetProxy = C83807F31C06A7BB008CCE53 /* PBXContainerItemProxy */;
+		};
+		C83807FF1C06A7BB008CCE53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C83807D81C06A7BB008CCE53 /* BTN角标 */;
+			targetProxy = C83807FE1C06A7BB008CCE53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C83807E51C06A7BB008CCE53 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C83807E61C06A7BB008CCE53 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C83807EA1C06A7BB008CCE53 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C83807EB1C06A7BB008CCE53 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C83808041C06A7BB008CCE53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C83808051C06A7BB008CCE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C83808071C06A7BB008CCE53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BTN角标/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.BTN--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C83808081C06A7BB008CCE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "BTN角标/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.BTN--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C838080A1C06A7BB008CCE53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BTN角标Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.BTN--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BTN角标.app/BTN角标";
+			};
+			name = Debug;
+		};
+		C838080B1C06A7BB008CCE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BTN角标Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.BTN--Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BTN角标.app/BTN角标";
+			};
+			name = Release;
+		};
+		C838080D1C06A7BB008CCE53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BTN角标UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.BTN--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BTN角标";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C838080E1C06A7BB008CCE53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "BTN角标UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "x.BTN--UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "BTN角标";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C83807D41C06A7BB008CCE53 /* Build configuration list for PBXProject "BTN角标" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C83808041C06A7BB008CCE53 /* Debug */,
+				C83808051C06A7BB008CCE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C83808061C06A7BB008CCE53 /* Build configuration list for PBXNativeTarget "BTN角标" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C83808071C06A7BB008CCE53 /* Debug */,
+				C83808081C06A7BB008CCE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C83808091C06A7BB008CCE53 /* Build configuration list for PBXNativeTarget "BTN角标Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C838080A1C06A7BB008CCE53 /* Debug */,
+				C838080B1C06A7BB008CCE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C838080C1C06A7BB008CCE53 /* Build configuration list for PBXNativeTarget "BTN角标UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C838080D1C06A7BB008CCE53 /* Debug */,
+				C838080E1C06A7BB008CCE53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C83807D11C06A7BB008CCE53 /* Project object */;
+}

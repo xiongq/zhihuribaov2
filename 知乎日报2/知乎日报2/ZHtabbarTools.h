@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "btnbadgevalue.h"
+
+
 typedef enum BtnSender{
     btnBack,   /* 返回列表**/
     btnNext,   /* 下一个故事**/
@@ -22,7 +25,7 @@ typedef enum BtnSender{
  *  声明委托方法，得在m文件实现
  */
 @optional
--(void)Btn:(UIButton *)btn selectbtn:(BtnSenderTYPE)btntype;
+-(void)Btn:(btnbadgevalue *)btn selectbtn:(BtnSenderTYPE)btntype;
 
 @end
 

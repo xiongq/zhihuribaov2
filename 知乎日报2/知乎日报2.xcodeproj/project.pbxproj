@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		6CCB293D92F6FDD9C9A64AC8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAB0B18BF0562FAF03ADC44 /* libPods.a */; };
 		C8291E421C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E411C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.m */; };
-		C8291E4C1C04483D00B1F126 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E4B1C04483D00B1F126 /* UIImage+ImageEffects.m */; };
-		C8291E4F1C04491600B1F126 /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E4E1C04491600B1F126 /* ParallaxHeaderView.m */; };
 		C8291E551C045CFE00B1F126 /* ZHstoryImages.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E541C045CFE00B1F126 /* ZHstoryImages.m */; };
 		C8291E591C0479EA00B1F126 /* ZHtabbarTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E581C0479EA00B1F126 /* ZHtabbarTools.m */; };
 		C82AC00A1C018195008A2AC6 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C82ABFF41C018195008A2AC6 /* MJDictionaryCache.m */; };
@@ -36,6 +34,8 @@
 		C8355F371C032DDF00A568CD /* ZHNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8355F361C032DDF00A568CD /* ZHNewsController.m */; };
 		C8355F3C1C032E3600A568CD /* ZHNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8355F3B1C032E3600A568CD /* ZHNewsModel.m */; };
 		C8355F401C032E7900A568CD /* topNews.m in Sources */ = {isa = PBXBuildFile; fileRef = C8355F3F1C032E7900A568CD /* topNews.m */; };
+		C83808171C06BE9F008CCE53 /* btnbadgevalue.m in Sources */ = {isa = PBXBuildFile; fileRef = C83808161C06BE9F008CCE53 /* btnbadgevalue.m */; };
+		C838081B1C06CDB0008CCE53 /* ZHLongComments.m in Sources */ = {isa = PBXBuildFile; fileRef = C838081A1C06CDB0008CCE53 /* ZHLongComments.m */; };
 		C8A372001BFEDDBE004F4C43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A371FF1BFEDDBE004F4C43 /* main.m */; };
 		C8A372031BFEDDBE004F4C43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A372021BFEDDBE004F4C43 /* AppDelegate.m */; };
 		C8A372091BFEDDBE004F4C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A372071BFEDDBE004F4C43 /* Main.storyboard */; };
@@ -73,10 +73,6 @@
 		B59623E1045F143F20BF0C4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C8291E401C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		C8291E411C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		C8291E4A1C04483D00B1F126 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		C8291E4B1C04483D00B1F126 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		C8291E4D1C04491600B1F126 /* ParallaxHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderView.h; sourceTree = "<group>"; };
-		C8291E4E1C04491600B1F126 /* ParallaxHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderView.m; sourceTree = "<group>"; };
 		C8291E531C045CFE00B1F126 /* ZHstoryImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHstoryImages.h; sourceTree = "<group>"; };
 		C8291E541C045CFE00B1F126 /* ZHstoryImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHstoryImages.m; sourceTree = "<group>"; };
 		C8291E571C0479EA00B1F126 /* ZHtabbarTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHtabbarTools.h; sourceTree = "<group>"; };
@@ -128,6 +124,10 @@
 		C8355F3B1C032E3600A568CD /* ZHNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHNewsModel.m; sourceTree = "<group>"; };
 		C8355F3E1C032E7900A568CD /* topNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topNews.h; sourceTree = "<group>"; };
 		C8355F3F1C032E7900A568CD /* topNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topNews.m; sourceTree = "<group>"; };
+		C83808151C06BE9F008CCE53 /* btnbadgevalue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btnbadgevalue.h; sourceTree = "<group>"; };
+		C83808161C06BE9F008CCE53 /* btnbadgevalue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btnbadgevalue.m; sourceTree = "<group>"; };
+		C83808191C06CDB0008CCE53 /* ZHLongComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHLongComments.h; sourceTree = "<group>"; };
+		C838081A1C06CDB0008CCE53 /* ZHLongComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHLongComments.m; sourceTree = "<group>"; };
 		C8A371FB1BFEDDBE004F4C43 /* 知乎日报2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "知乎日报2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A371FF1BFEDDBE004F4C43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8A372011BFEDDBE004F4C43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -205,7 +205,6 @@
 			children = (
 				C8291E531C045CFE00B1F126 /* ZHstoryImages.h */,
 				C8291E541C045CFE00B1F126 /* ZHstoryImages.m */,
-				C8291E5A1C0479F100B1F126 /* web工具 */,
 			);
 			name = "web故事图";
 			sourceTree = "<group>";
@@ -300,6 +299,15 @@
 			name = "新闻详情";
 			sourceTree = "<group>";
 		};
+		C83808181C06BEA8008CCE53 /* 设置button badgeValue */ = {
+			isa = PBXGroup;
+			children = (
+				C83808151C06BE9F008CCE53 /* btnbadgevalue.h */,
+				C83808161C06BE9F008CCE53 /* btnbadgevalue.m */,
+			);
+			name = "设置button badgeValue";
+			sourceTree = "<group>";
+		};
 		C8A371F21BFEDDBE004F4C43 = {
 			isa = PBXGroup;
 			children = (
@@ -332,8 +340,6 @@
 				C8A372311BFEE700004F4C43 /* 控制器 */,
 				C8A3723D1BFEE80D004F4C43 /* 视图 */,
 				C8A372431BFF0682004F4C43 /* 第三方 */,
-				C8291E4D1C04491600B1F126 /* ParallaxHeaderView.h */,
-				C8291E4E1C04491600B1F126 /* ParallaxHeaderView.m */,
 				C8A3720A1BFEDDBE004F4C43 /* Assets.xcassets */,
 				C8A3720C1BFEDDBE004F4C43 /* LaunchScreen.storyboard */,
 				C8A372071BFEDDBE004F4C43 /* Main.storyboard */,
@@ -400,6 +406,7 @@
 		C8A3723D1BFEE80D004F4C43 /* 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				C8291E5A1C0479F100B1F126 /* web工具 */,
 				C8A3723A1BFEE808004F4C43 /* ZHTableViewCell.h */,
 				C8A3723B1BFEE808004F4C43 /* ZHTableViewCell.m */,
 				C8355F3E1C032E7900A568CD /* topNews.h */,
@@ -415,8 +422,6 @@
 				C82AC0281C01BC05008A2AC6 /* MJRefresh */,
 				C82ABFF21C018195008A2AC6 /* MJExtension */,
 				C8A372441BFF0696004F4C43 /* navi color */,
-				C8291E4A1C04483D00B1F126 /* UIImage+ImageEffects.h */,
-				C8291E4B1C04483D00B1F126 /* UIImage+ImageEffects.m */,
 			);
 			name = "第三方";
 			sourceTree = "<group>";
@@ -435,6 +440,8 @@
 			children = (
 				C8355F3D1C032E3D00A568CD /* 新闻详情 */,
 				C8355F391C032E0800A568CD /* 主页列表模型 */,
+				C83808191C06CDB0008CCE53 /* ZHLongComments.h */,
+				C838081A1C06CDB0008CCE53 /* ZHLongComments.m */,
 			);
 			name = "模型";
 			sourceTree = "<group>";
@@ -448,6 +455,7 @@
 				C8CBCA7A1BFF200000244109 /* afnGETPOST.m */,
 				C82AC0151C018621008A2AC6 /* UIView+Extension.h */,
 				C82AC0161C018621008A2AC6 /* UIView+Extension.m */,
+				C83808181C06BEA8008CCE53 /* 设置button badgeValue */,
 			);
 			name = "自己的afn框架";
 			sourceTree = "<group>";
@@ -650,7 +658,6 @@
 				C82AC02F1C01BC05008A2AC6 /* UIScrollView+MJRefresh.m in Sources */,
 				C8A372421BFF067D004F4C43 /* UINavigationBar+Awesome.m in Sources */,
 				C82AC02B1C01BC05008A2AC6 /* MJRefreshConst.m in Sources */,
-				C8291E4F1C04491600B1F126 /* ParallaxHeaderView.m in Sources */,
 				C82AC02C1C01BC05008A2AC6 /* MJRefreshFooterView.m in Sources */,
 				C8A372471BFF1729004F4C43 /* ZHstoryModel.m in Sources */,
 				C8355F3C1C032E3600A568CD /* ZHNewsModel.m in Sources */,
@@ -664,11 +671,12 @@
 				C82AC00B1C018195008A2AC6 /* MJExtensionConst.m in Sources */,
 				C82AC02D1C01BC05008A2AC6 /* MJRefreshHeaderView.m in Sources */,
 				C8A372001BFEDDBE004F4C43 /* main.m in Sources */,
-				C8291E4C1C04483D00B1F126 /* UIImage+ImageEffects.m in Sources */,
+				C83808171C06BE9F008CCE53 /* btnbadgevalue.m in Sources */,
 				C8291E551C045CFE00B1F126 /* ZHstoryImages.m in Sources */,
 				C82AC0301C01BC05008A2AC6 /* UIView+MJExtension.m in Sources */,
 				C82AC0111C018195008A2AC6 /* NSObject+MJCoding.m in Sources */,
 				C8355F401C032E7900A568CD /* topNews.m in Sources */,
+				C838081B1C06CDB0008CCE53 /* ZHLongComments.m in Sources */,
 				C8A372391BFEE7C8004F4C43 /* ZHTableViewController.m in Sources */,
 				C82AC00E1C018195008A2AC6 /* MJPropertyKey.m in Sources */,
 				C82AC00A1C018195008A2AC6 /* MJDictionaryCache.m in Sources */,

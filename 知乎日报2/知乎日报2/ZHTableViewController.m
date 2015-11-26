@@ -4,8 +4,9 @@
 //
 //  Created by xiong on 15/11/20.
 //  Copyright © 2015年 xiong. All rights reserved.
-//
+// 启动图片
 
+//http://news-at.zhihu.com/api/4/start-image/750*1334?client=0
 #import "ZHTableViewController.h"
 #import "UINavigationBar+Awesome.h"
 #import "ZHstoryModel.h"
@@ -18,10 +19,10 @@
 
 
 
-const CGFloat topViewH = 350;
+CGFloat topViewH = 350;
 #define NAVBAR_CHANGE_POINT -175
 
-@interface ZHTableViewController ()
+@interface ZHTableViewController ()<loadMoreStoryIDDelegate>
 @property (weak, nonatomic  ) UIImageView    *zoom;
 @property (strong, nonatomic) NSMutableArray *story;
 @property (strong, nonatomic) NSMutableArray *top_story;
@@ -86,8 +87,8 @@ const CGFloat topViewH = 350;
 //    [self.tableView addHeaderWithTarget:self action:@selector(footresh)];
 }
 
+#pragma mark - 获取最新新闻
 
-//获取最新新闻
 -(void)loadNewNews{
     //    https://news-at.zhihu.com/api/4/news/latest
     NSString *lastStory  = @"https://news-at.zhihu.com/api/4/news/latest";
@@ -166,10 +167,13 @@ const CGFloat topViewH = 350;
         [self.story addObjectsFromArray:story];
         [self.tableView reloadData];
         [self.tableView footerEndRefreshing];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"complete" object:nil];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
     }];
 }
+
 //获取时间数组
 -(void)loadTimeArray{
     self.timeArray = [NSMutableArray new];
@@ -213,10 +217,10 @@ const CGFloat topViewH = 350;
     }
     return cell;
 }
-//跳转
+// 选中跳转
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     ZHNewsController *news = [self.storyboard instantiateViewControllerWithIdentifier:@"webview"];
-    
+    news.delegate = self;
     Stories *stoys = self.story[indexPath.row];
     news.id  = stoys.id;
     news.row = indexPath.row;
@@ -255,11 +259,16 @@ const CGFloat topViewH = 350;
 //}
 
 #pragma mark - tableVIew delegate
+
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self setNavigationBarColor:scrollView];
     [self setTopViewFrame:scrollView];
 }
-
+-(void)loadMoreStoryId{
+    [self footresh];
+    NSLog(@"ID---gogogo");
+}
+#pragma mark - 一些方法
 /**
  *  设置导航栏 滑动颜色变化
  */
@@ -302,5 +311,6 @@ const CGFloat topViewH = 350;
 }
 -(void)dealloc{
     NSLog(@"%s",__func__);
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

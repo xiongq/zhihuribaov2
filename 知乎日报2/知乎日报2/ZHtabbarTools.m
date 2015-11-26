@@ -7,6 +7,7 @@
 //
 
 #import "ZHtabbarTools.h"
+//#import "btnbadgevalue.h"
 
 @implementation ZHtabbarTools
 
@@ -27,15 +28,17 @@
     CGFloat btnX = btnW * list - btnW;
     CGFloat btnY = 0;
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(btnX, btnY, btnW, btnH)];
-    [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+    btnbadgevalue *btn = [[btnbadgevalue alloc] initWithFrame:CGRectMake(btnX, btnY, btnW, btnH)];
     btn.tag = type;
-    [btn setImage:[UIImage imageNamed:hightImage] forState:UIControlStateHighlighted];
+    [btn setNomoreimage:image HightImage:hightImage];
+    //    [btn setImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
+//    
+//    [btn setImage:[UIImage imageNamed:hightImage] forState:UIControlStateHighlighted];
     [self addSubview:btn];
     [btn addTarget:self action:@selector(btnSEND:) forControlEvents:UIControlEventTouchUpInside];
 }
 
--(void)btnSEND:(UIButton *)btn{
+-(void)btnSEND:(btnbadgevalue *)btn{
 //    UIButton *btn  = sender;
 //    switch (btn.tag) {
 //        case btnBack:

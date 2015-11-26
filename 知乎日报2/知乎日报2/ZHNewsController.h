@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+
+@protocol loadMoreStoryIDDelegate <NSObject>
+
+@optional
+-(void)loadMoreStoryId;
+
+@end
+
 @interface ZHNewsController : UIViewController
+
+@property (nonatomic, weak) id<loadMoreStoryIDDelegate> delegate;
+
 @property (nonatomic, assign) NSInteger id;
 @property (nonatomic, assign) NSInteger row;
 @property (nonatomic, strong) NSMutableArray *storys;
