@@ -8,6 +8,7 @@
 
 //http://news-at.zhihu.com/api/4/start-image/750*1334?client=0
 #import "ZHTableViewController.h"
+#import "UIView+Extension.h"
 #import "UINavigationBar+Awesome.h"
 #import "ZHstoryModel.h"
 #import "ZHTableViewCell.h"
@@ -16,51 +17,41 @@
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "ZHNewsController.h"
+#import "top5.h"
+#import "SDCycleScrollView.h"
 
 
 
 CGFloat topViewH = 350;
-#define NAVBAR_CHANGE_POINT -175
+#define NAVBAR_CHANGE_POINT -128
 
-@interface ZHTableViewController ()<loadMoreStoryIDDelegate>
+@interface ZHTableViewController ()<loadMoreStoryIDDelegate,SDCycleScrollViewDelegate>
 @property (weak, nonatomic  ) UIImageView    *zoom;
 @property (strong, nonatomic) NSMutableArray *story;
 @property (strong, nonatomic) NSMutableArray *top_story;
 @property (strong, nonatomic) NSMutableArray *timeArray;
 @property (strong, nonatomic) NSString       *dates;
+@property (strong, nonatomic) top5              *top5;
+@property (strong, nonatomic) UIScrollView    *temp;
+@property (strong, nonatomic) SDCycleScrollView    *scroll;
+@property (assign, nonatomic, getter=isTop) BOOL    arriveTOP;
 
 @end
 
 @implementation ZHTableViewController
-//-(void)viewWillAppear:(BOOL)animated{
-//    [super viewWillAppear:animated];
-//    NSLog(@"will---");
-//    //获取最新新闻
-//    //    self.navigationController.navigationBarHidden= NO;
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//        [self loadNewNews];
-//        [self loadTimeArray];
-//        
-//        //            dispatch_async(dispatch_get_main_queue(), ^{
-//        //                [self.tableView reloadData];
-//        //            });
-//        
-//    });
-//}
-//-(void)viewDidAppear:(BOOL)animated{
-//    [super viewDidAppear:animated];
-////    [self.navigationController setNavigationBarHidden:NO animated:YES];
-//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"load---");
+    [self.tableView addFooterWithTarget:self action:@selector(footresh)];
 //    获取最新新闻
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
             [self loadNewNews];
             [self loadTimeArray];
+//        [self setScrollTop5Image:self.top_story];
         
 //            dispatch_async(dispatch_get_main_queue(), ^{
-//                [self.tableView reloadData];
+////                [self.tableView reloadData];
+//                [self setScrollTop5Image:self.top_story];
 //            });
         
     });
@@ -73,27 +64,84 @@ CGFloat topViewH = 350;
     /**
      *  设置顶部滚动视图
      */
-    self.tableView.contentInset = UIEdgeInsetsMake(topViewH * 0.5, 0, 0, 0);
-    UIImageView *zoomView       = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"car"]
-                             ];
-    zoomView.frame              = CGRectMake(0, -topViewH, self.view.frame.size.width, topViewH);
-    zoomView.contentMode        = UIViewContentModeScaleAspectFill;
-    zoomView.clipsToBounds      = YES;
-    [self.tableView insertSubview:zoomView atIndex:0];
-    self.zoom                   = zoomView;
-    
-//    NSLog(@"%f",(self.view.frame.size.height - topViewH *0.5 - 64) / 5);
-    [self.tableView addFooterWithTarget:self action:@selector(footresh)];
-//    [self.tableView addHeaderWithTarget:self action:@selector(footresh)];
-}
+    self.tableView.contentInset = UIEdgeInsetsMake(200-64, 0, 0, 0);
 
+}
+-(void)setScrollTop5Image:(NSMutableArray *)array{
+//    NSInteger count = array.count;
+//    NSLog(@"cpint-------%ld",(long)count);
+//    UIScrollView *test2 = [[UIScrollView alloc] initWithFrame:CGRectMake(0, -200, self.view.width, 200)];
+//    test2.contentSize = CGSizeMake(self.view.width * count, self.top5.height);
+//    test2.backgroundColor = [UIColor redColor];
+//    test2.pagingEnabled = YES;
+//    test2.bounces = NO;
+////
+////    self.top5.scroll.contentSize = CGSizeMake(self.view.width * count, self.top5.height);
+////    self.top5.scroll.pagingEnabled = YES;
+////    [self.top5 addSubview:self.scroll];
+//    
+//    for (NSInteger i = 0; i < count; i++) {
+//        Top_Stories *tops = [array objectAtIndex:i];
+//        UIImageView *no = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.width * i, 0, self.view.width, 200)];
+//        UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 120, self.view.width-30, 60)];
+//        title.textAlignment = NSTextAlignmentLeft;
+//        title.font = [UIFont systemFontOfSize:20];
+//        title.textColor = [UIColor whiteColor];
+//        title.text = tops.title;
+//        title.numberOfLines = 0;
+//        [no addSubview:title];
+//        no.contentMode = UIViewContentModeScaleAspectFill;
+//        [no sd_setImageWithURL:[NSURL URLWithString:tops.image] placeholderImage:[UIImage imageNamed:@"car"]];
+////        no.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.3];
+//        
+////        [self.top5.scroll addSubview:no];
+////        self.ima = no;
+//        [test2 addSubview:no];
+//        
+//    }
+//    [self.tableView insertSubview:test2 atIndex:0];
+//   self.temp = test2;
+    NSMutableArray *images = [NSMutableArray new];
+    NSMutableArray *titles = [NSMutableArray new];
+    for (Top_Stories *tops in  array) {
+        [images addObject:tops.image];
+        [titles addObject:tops.title];
+    }
+    NSLog(@"count----%lu",(unsigned long)images.count);
+    SDCycleScrollView *test = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, -285, self.view.width, 285) imageURLStringsGroup:images];
+    
+//    test.titleLabelBackgroundColor = [UIColor clearColor];
+    test.titleLabelTextFont = [UIFont systemFontOfSize:22];
+    test.titleLabelHeight = 60;
+    test.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
+    test.autoScrollTimeInterval = 6.0;
+    test.pageControlAliment = SDCycleScrollViewPageContolAlimentCenter;
+    test.delegate =self;
+    test.titlesGroup = titles;
+    test.dotColor = [UIColor grayColor];
+    [self.tableView insertSubview: test atIndex:0];
+    self.scroll = test;
+
+
+}
+-(void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index{
+    Top_Stories *tops =  [self.top_story objectAtIndex:index];
+    ZHNewsController *news = [self.storyboard instantiateViewControllerWithIdentifier:@"webview"];
+    news.delegate = self;
+
+    news.id  = tops.id;
+    news.row = index;
+    news.storys = self.story;
+    [self.navigationController pushViewController:news animated:YES];
+    NSLog(@"---点击了第%ld张图片", index);
+}
 #pragma mark - 获取最新新闻
 
 -(void)loadNewNews{
     //    https://news-at.zhihu.com/api/4/news/latest
     NSString *lastStory  = @"https://news-at.zhihu.com/api/4/news/latest";
     [afnGETPOST GETURL:lastStory prames:nil success:^(id json) {
-//
+        NSLog(@"%@",json);
         self.dates = json[@"date"];
         
         //今天的故事
@@ -103,6 +151,9 @@ CGFloat topViewH = 350;
         //top5故事
         NSMutableArray *top_story = [Top_Stories mj_objectArrayWithKeyValuesArray:json[@"top_stories"]];
         self.top_story = top_story;
+        if (top_story != nil) {
+             [self setScrollTop5Image:self.top_story];
+        }
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         NSLog(@"%@",error);
@@ -229,7 +280,7 @@ CGFloat topViewH = 350;
 
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return (self.view.frame.size.height - topViewH *0.5 - 64) / 5;
+    return (self.view.frame.size.height - 200) / 5;
 }
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     //隐藏第一个头
@@ -262,7 +313,26 @@ CGFloat topViewH = 350;
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self setNavigationBarColor:scrollView];
-    [self setTopViewFrame:scrollView];
+
+    CGFloat offsetY = scrollView.contentOffset.y;
+    NSLog(@"%f",offsetY);
+
+    if (offsetY > 0) {
+        
+    }else if(offsetY < -285  ){
+        scrollView.contentOffset = CGPointMake(0, -285);
+        
+    }
+
+    
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+        self.scroll.autoScroll = NO;
+    
+}
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+        self.scroll.autoScroll = YES;
+        self.arriveTOP = NO;
 }
 -(void)loadMoreStoryId{
     [self footresh];
@@ -282,24 +352,7 @@ CGFloat topViewH = 350;
         [self.navigationController.navigationBar lt_setBackgroundColor:[color colorWithAlphaComponent:0]];
     }
 }
-/**
- *  下拉放大
- */
--(void)setTopViewFrame:(UIScrollView *)scrollView{
-    // 向下拽了多少距离
-    CGFloat down = -(topViewH * 0.5) - scrollView.contentOffset.y -64;
-//    NSLog(@"%f",down);
-    if (down < 0) return;
-    if (down > 64) {
-        return;
-    };
-    CGRect frame = self.zoom.frame;
-    // 5决定图片变大的速度,值越大,速度越快
-    frame.size.height = topViewH + down * 2;
-    self.zoom.frame = frame;
-    
 
-}
 /**
  *  上拉刷新
  */

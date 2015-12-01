@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6CCB293D92F6FDD9C9A64AC8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAB0B18BF0562FAF03ADC44 /* libPods.a */; };
 		C8291E421C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E411C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.m */; };
-		C8291E551C045CFE00B1F126 /* ZHstoryImages.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E541C045CFE00B1F126 /* ZHstoryImages.m */; };
 		C8291E591C0479EA00B1F126 /* ZHtabbarTools.m in Sources */ = {isa = PBXBuildFile; fileRef = C8291E581C0479EA00B1F126 /* ZHtabbarTools.m */; };
 		C82AC00A1C018195008A2AC6 /* MJDictionaryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C82ABFF41C018195008A2AC6 /* MJDictionaryCache.m */; };
 		C82AC00B1C018195008A2AC6 /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C82ABFF71C018195008A2AC6 /* MJExtensionConst.m */; };
@@ -36,6 +35,10 @@
 		C8355F401C032E7900A568CD /* topNews.m in Sources */ = {isa = PBXBuildFile; fileRef = C8355F3F1C032E7900A568CD /* topNews.m */; };
 		C83808171C06BE9F008CCE53 /* btnbadgevalue.m in Sources */ = {isa = PBXBuildFile; fileRef = C83808161C06BE9F008CCE53 /* btnbadgevalue.m */; };
 		C838081B1C06CDB0008CCE53 /* ZHLongComments.m in Sources */ = {isa = PBXBuildFile; fileRef = C838081A1C06CDB0008CCE53 /* ZHLongComments.m */; };
+		C843A6301C073FE2007B2663 /* toptitle.xib in Resources */ = {isa = PBXBuildFile; fileRef = C843A62F1C073FE2007B2663 /* toptitle.xib */; };
+		C843A6391C0740B3007B2663 /* toptitle.m in Sources */ = {isa = PBXBuildFile; fileRef = C843A6381C0740B3007B2663 /* toptitle.m */; };
+		C843A63C1C075281007B2663 /* top5.m in Sources */ = {isa = PBXBuildFile; fileRef = C843A63B1C075281007B2663 /* top5.m */; };
+		C843A63E1C075297007B2663 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = C843A63D1C075297007B2663 /* View.xib */; };
 		C8A372001BFEDDBE004F4C43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A371FF1BFEDDBE004F4C43 /* main.m */; };
 		C8A372031BFEDDBE004F4C43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A372021BFEDDBE004F4C43 /* AppDelegate.m */; };
 		C8A372091BFEDDBE004F4C43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A372071BFEDDBE004F4C43 /* Main.storyboard */; };
@@ -73,8 +76,6 @@
 		B59623E1045F143F20BF0C4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C8291E401C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		C8291E411C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		C8291E531C045CFE00B1F126 /* ZHstoryImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHstoryImages.h; sourceTree = "<group>"; };
-		C8291E541C045CFE00B1F126 /* ZHstoryImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHstoryImages.m; sourceTree = "<group>"; };
 		C8291E571C0479EA00B1F126 /* ZHtabbarTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHtabbarTools.h; sourceTree = "<group>"; };
 		C8291E581C0479EA00B1F126 /* ZHtabbarTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHtabbarTools.m; sourceTree = "<group>"; };
 		C82ABFF31C018195008A2AC6 /* MJDictionaryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJDictionaryCache.h; sourceTree = "<group>"; };
@@ -128,6 +129,12 @@
 		C83808161C06BE9F008CCE53 /* btnbadgevalue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btnbadgevalue.m; sourceTree = "<group>"; };
 		C83808191C06CDB0008CCE53 /* ZHLongComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHLongComments.h; sourceTree = "<group>"; };
 		C838081A1C06CDB0008CCE53 /* ZHLongComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHLongComments.m; sourceTree = "<group>"; };
+		C843A62F1C073FE2007B2663 /* toptitle.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = toptitle.xib; sourceTree = "<group>"; };
+		C843A6371C0740B3007B2663 /* toptitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = toptitle.h; sourceTree = "<group>"; };
+		C843A6381C0740B3007B2663 /* toptitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = toptitle.m; sourceTree = "<group>"; };
+		C843A63A1C075281007B2663 /* top5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = top5.h; sourceTree = "<group>"; };
+		C843A63B1C075281007B2663 /* top5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = top5.m; sourceTree = "<group>"; };
+		C843A63D1C075297007B2663 /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		C8A371FB1BFEDDBE004F4C43 /* 知乎日报2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "知乎日报2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A371FF1BFEDDBE004F4C43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8A372011BFEDDBE004F4C43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -200,13 +207,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		C8291E561C0479C300B1F126 /* web故事图 */ = {
+		C8291E561C0479C300B1F126 /* 顶部图片详情 */ = {
 			isa = PBXGroup;
 			children = (
-				C8291E531C045CFE00B1F126 /* ZHstoryImages.h */,
-				C8291E541C045CFE00B1F126 /* ZHstoryImages.m */,
+				C843A62F1C073FE2007B2663 /* toptitle.xib */,
+				C843A6371C0740B3007B2663 /* toptitle.h */,
+				C843A6381C0740B3007B2663 /* toptitle.m */,
 			);
-			name = "web故事图";
+			name = "顶部图片详情";
 			sourceTree = "<group>";
 		};
 		C8291E5A1C0479F100B1F126 /* web工具 */ = {
@@ -308,6 +316,43 @@
 			name = "设置button badgeValue";
 			sourceTree = "<group>";
 		};
+		C843A6281C07215A007B2663 /* 评论数量 */ = {
+			isa = PBXGroup;
+			children = (
+				C83808191C06CDB0008CCE53 /* ZHLongComments.h */,
+				C838081A1C06CDB0008CCE53 /* ZHLongComments.m */,
+			);
+			name = "评论数量";
+			sourceTree = "<group>";
+		};
+		C843A6291C0721EF007B2663 /* third Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C82AC0281C01BC05008A2AC6 /* MJRefresh */,
+				C82ABFF21C018195008A2AC6 /* MJExtension */,
+				C8A372441BFF0696004F4C43 /* navi color */,
+			);
+			name = "third Frameworks";
+			sourceTree = "<group>";
+		};
+		C843A62A1C07223A007B2663 /* cell主页 */ = {
+			isa = PBXGroup;
+			children = (
+				C8A3723A1BFEE808004F4C43 /* ZHTableViewCell.h */,
+				C8A3723B1BFEE808004F4C43 /* ZHTableViewCell.m */,
+			);
+			name = "cell主页";
+			sourceTree = "<group>";
+		};
+		C843A62B1C072275007B2663 /* topnews- no */ = {
+			isa = PBXGroup;
+			children = (
+				C8355F3E1C032E7900A568CD /* topNews.h */,
+				C8355F3F1C032E7900A568CD /* topNews.m */,
+			);
+			name = "topnews- no";
+			sourceTree = "<group>";
+		};
 		C8A371F21BFEDDBE004F4C43 = {
 			isa = PBXGroup;
 			children = (
@@ -335,11 +380,10 @@
 			children = (
 				C8A372011BFEDDBE004F4C43 /* AppDelegate.h */,
 				C8A372021BFEDDBE004F4C43 /* AppDelegate.m */,
-				C8CBCA7C1BFF202500244109 /* 自己的afn框架 */,
-				C8A372481BFF1734004F4C43 /* 模型 */,
-				C8A372311BFEE700004F4C43 /* 控制器 */,
-				C8A3723D1BFEE80D004F4C43 /* 视图 */,
-				C8A372431BFF0682004F4C43 /* 第三方 */,
+				C8A372481BFF1734004F4C43 /* Model */,
+				C8A372311BFEE700004F4C43 /* Controller */,
+				C8A3723D1BFEE80D004F4C43 /* View */,
+				C8A372431BFF0682004F4C43 /* lib */,
 				C8A3720A1BFEDDBE004F4C43 /* Assets.xcassets */,
 				C8A3720C1BFEDDBE004F4C43 /* LaunchScreen.storyboard */,
 				C8A372071BFEDDBE004F4C43 /* Main.storyboard */,
@@ -375,14 +419,14 @@
 			path = "知乎日报2UITests";
 			sourceTree = "<group>";
 		};
-		C8A372311BFEE700004F4C43 /* 控制器 */ = {
+		C8A372311BFEE700004F4C43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C8355F381C032DF100A568CD /* 详情 */,
 				C8A372361BFEE75F004F4C43 /* 导航控制器 */,
+				C8355F381C032DF100A568CD /* 详情 */,
 				C8A372321BFEE726004F4C43 /* 主页 */,
 			);
-			name = "控制器";
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		C8A372321BFEE726004F4C43 /* 主页 */ = {
@@ -403,27 +447,27 @@
 			name = "导航控制器";
 			sourceTree = "<group>";
 		};
-		C8A3723D1BFEE80D004F4C43 /* 视图 */ = {
+		C8A3723D1BFEE80D004F4C43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C843A62B1C072275007B2663 /* topnews- no */,
 				C8291E5A1C0479F100B1F126 /* web工具 */,
-				C8A3723A1BFEE808004F4C43 /* ZHTableViewCell.h */,
-				C8A3723B1BFEE808004F4C43 /* ZHTableViewCell.m */,
-				C8355F3E1C032E7900A568CD /* topNews.h */,
-				C8355F3F1C032E7900A568CD /* topNews.m */,
-				C8291E561C0479C300B1F126 /* web故事图 */,
+				C843A62A1C07223A007B2663 /* cell主页 */,
+				C8291E561C0479C300B1F126 /* 顶部图片详情 */,
+				C843A63A1C075281007B2663 /* top5.h */,
+				C843A63B1C075281007B2663 /* top5.m */,
+				C843A63D1C075297007B2663 /* View.xib */,
 			);
-			name = "视图";
+			name = View;
 			sourceTree = "<group>";
 		};
-		C8A372431BFF0682004F4C43 /* 第三方 */ = {
+		C8A372431BFF0682004F4C43 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				C82AC0281C01BC05008A2AC6 /* MJRefresh */,
-				C82ABFF21C018195008A2AC6 /* MJExtension */,
-				C8A372441BFF0696004F4C43 /* navi color */,
+				C8CBCA7C1BFF202500244109 /* self's Frameworks */,
+				C843A6291C0721EF007B2663 /* third Frameworks */,
 			);
-			name = "第三方";
+			name = lib;
 			sourceTree = "<group>";
 		};
 		C8A372441BFF0696004F4C43 /* navi color */ = {
@@ -435,18 +479,17 @@
 			name = "navi color";
 			sourceTree = "<group>";
 		};
-		C8A372481BFF1734004F4C43 /* 模型 */ = {
+		C8A372481BFF1734004F4C43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C8355F3D1C032E3D00A568CD /* 新闻详情 */,
 				C8355F391C032E0800A568CD /* 主页列表模型 */,
-				C83808191C06CDB0008CCE53 /* ZHLongComments.h */,
-				C838081A1C06CDB0008CCE53 /* ZHLongComments.m */,
+				C843A6281C07215A007B2663 /* 评论数量 */,
 			);
-			name = "模型";
+			name = Model;
 			sourceTree = "<group>";
 		};
-		C8CBCA7C1BFF202500244109 /* 自己的afn框架 */ = {
+		C8CBCA7C1BFF202500244109 /* self's Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				C8291E401C0427B500B1F126 /* UINavigationController+FDFullscreenPopGesture.h */,
@@ -457,7 +500,7 @@
 				C82AC0161C018621008A2AC6 /* UIView+Extension.m */,
 				C83808181C06BEA8008CCE53 /* 设置button badgeValue */,
 			);
-			name = "自己的afn框架";
+			name = "self's Frameworks";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +615,8 @@
 				C8A3720E1BFEDDBE004F4C43 /* LaunchScreen.storyboard in Resources */,
 				C8A3720B1BFEDDBE004F4C43 /* Assets.xcassets in Resources */,
 				C82AC0291C01BC05008A2AC6 /* MJRefresh.bundle in Resources */,
+				C843A6301C073FE2007B2663 /* toptitle.xib in Resources */,
+				C843A63E1C075297007B2663 /* View.xib in Resources */,
 				C8A372091BFEDDBE004F4C43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,6 +691,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8A372351BFEE75A004F4C43 /* ZHnavigationController.m in Sources */,
+				C843A63C1C075281007B2663 /* top5.m in Sources */,
 				C82AC0131C018195008A2AC6 /* NSObject+MJProperty.m in Sources */,
 				C82AC00C1C018195008A2AC6 /* MJFoundation.m in Sources */,
 				C82AC02A1C01BC05008A2AC6 /* MJRefreshBaseView.m in Sources */,
@@ -671,8 +717,8 @@
 				C82AC00B1C018195008A2AC6 /* MJExtensionConst.m in Sources */,
 				C82AC02D1C01BC05008A2AC6 /* MJRefreshHeaderView.m in Sources */,
 				C8A372001BFEDDBE004F4C43 /* main.m in Sources */,
+				C843A6391C0740B3007B2663 /* toptitle.m in Sources */,
 				C83808171C06BE9F008CCE53 /* btnbadgevalue.m in Sources */,
-				C8291E551C045CFE00B1F126 /* ZHstoryImages.m in Sources */,
 				C82AC0301C01BC05008A2AC6 /* UIView+MJExtension.m in Sources */,
 				C82AC0111C018195008A2AC6 /* NSObject+MJCoding.m in Sources */,
 				C8355F401C032E7900A568CD /* topNews.m in Sources */,

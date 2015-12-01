@@ -11,22 +11,24 @@
 #import "ZHNewsModel.h"
 #import "MJExtension.h"
 #import <UIImageView+WebCache.h>
-#import "ZHstoryImages.h"
+
 #import "ZHtabbarTools.h"
 #import "UIView+Extension.h"
 #import "ZHstoryModel.h"
 #import "ZHLongComments.h"
 
+#import "toptitle.h"
+
 
 //#define CGFloat topviewhww 350;
-const CGFloat topviewhw = 350;
+const CGFloat topviewhw = 150;
 @interface ZHNewsController ()<UIScrollViewDelegate,UIWebViewDelegate,ZHtabbarToolsDelegate>
 @property (strong, nonatomic)  UIWebView *news;
-@property (strong, nonatomic)  ZHstoryImages *storyImage;
 @property (weak, nonatomic)     UIView *shadow;
 @property (strong, nonatomic)     UIView *loading;
 @property (strong, nonatomic)   UILabel *load;
 @property (strong, nonatomic)     ZHtabbarTools *tools;
+@property (strong, nonatomic)  toptitle *toptitle;
 
 @end
 
@@ -58,7 +60,7 @@ const CGFloat topviewhw = 350;
     if (self.row == self.storys.count - 1) {
         [self.delegate loadMoreStoryId];
     }
-//    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
 //    self.view.clipsToBounds = YES;
     //webview---------------------------------------------------------------------------------
     self.news = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -152,7 +154,7 @@ const CGFloat topviewhw = 350;
  */
 -(void)CGAnimation{
     CGAffineTransform offsetUP   =  CGAffineTransformMakeTranslation(0, -self.view.frame.size.height);
-    CGAffineTransform offsetDOWN =  CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
+//    CGAffineTransform offsetDOWN =  CGAffineTransformMakeTranslation(0, self.view.frame.size.height);
     ZHNewsController *Tonewsvc = [self.storyboard instantiateViewControllerWithIdentifier:@"webview"];
     UIView *toview = Tonewsvc.view;
     toview.frame = self.view.frame;
@@ -162,13 +164,9 @@ const CGFloat topviewhw = 350;
 //    UIView *fromview = [self.view resizableSnapshotViewFromRect:rect afterScreenUpdates:YES withCapInsets:edge];
     [self.view addSubview:fromview];
     toview.transform = offsetUP;
-    
-  
     [self addChildViewController:Tonewsvc];
     [UIView animateWithDuration:0.5 animations:^{
-        [self.storyImage removeFromSuperview];
-
-        
+        [self.toptitle removeFromSuperview];
         fromview.transform = offsetUP;
 //        toview.transform = offsetDOWN;
           [self.view addSubview:toview];
@@ -189,13 +187,26 @@ const CGFloat topviewhw = 350;
 /**
  *  设置顶部数据源
  */
--(void)setIMAGE:(ZHNewsModel *)model{
-    self.storyImage = [[ZHstoryImages alloc] initWithFrame:CGRectMake(0, -131, self.view.frame.size.width, topviewhw)];
-    self.storyImage.backgroundColor = [UIColor grayColor];
-    self.storyImage.souce.text = [NSString stringWithFormat:@"图片:%@",model.image_source];
-    self.storyImage.title.text = model.title;
-    [self.storyImage.storyImage sd_setImageWithURL:[NSURL URLWithString:model.image]];
-    [self.news.scrollView addSubview:self.storyImage];
+//-(void)setIMAGE:(ZHNewsModel *)model{
+//    self.storyImage = [[ZHstoryImages alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 200)];
+//    self.storyImage.backgroundColor = [UIColor grayColor];
+//    self.storyImage.souce.text = [NSString stringWithFormat:@"图片:%@",model.image_source];
+//    self.storyImage.title.text = model.title;
+//    [self.storyImage.storyImage sd_setImageWithURL:[NSURL URLWithString:model.image]];
+//    [self.news.scrollView addSubview:self.storyImage];
+//}
+-(void)setopTitle:(ZHNewsModel *)model{
+    toptitle  *topv = [[[NSBundle mainBundle] loadNibNamed:@"toptitle" owner:nil options:nil] firstObject];
+    topv.x = topv.y = 0;
+    topv.width = self.view.width;
+    topv.height = 200;
+
+    [topv sd_setImageWithURL:[NSURL URLWithString:model.image] placeholderImage:[UIImage imageNamed:@"car"]];
+    topv.titleLabel.text = model.title;
+    topv.source.text = [NSString stringWithFormat:@"图片:%@",model.image_source];
+//    [topv.shadowView bringSubviewToFront:topv.titleLabel];
+    [self.news.scrollView addSubview:topv];
+    self.toptitle =topv;
 }
 #pragma mark - 实现工具栏委托方法
 
@@ -274,10 +285,11 @@ const CGFloat topviewhw = 350;
         NSURL *css = [NSURL URLWithString:[model.css firstObject]];
         NSString *new = [NSString stringWithFormat:@"<html><head><link rel=\"stylesheet\" href= %@ </head><body>%@</body></html>",css,model.body];
         [self.news loadHTMLString:new baseURL:nil];
-        self.news.scrollView.contentInset = UIEdgeInsetsMake(20, 0, 20, 0);
+//        self.news.scrollView.contentInset = UIEdgeInsetsMake(20, 0, 20, 0);
         self.loading.hidden = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
-            [self setIMAGE:model];
+//            [self setIMAGE:model];
+            [self setopTitle:model];
         });
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
         NSLog(@"详情-------%@",error);
@@ -290,8 +302,9 @@ const CGFloat topviewhw = 350;
     [QueueRequset2 setCompletionBlockWithSuccess:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         ZHLongComments *model = [ZHLongComments mj_objectWithKeyValues:responseObject];
          NSLog(@"%ld",(long)model.popularity);
+        NSString *suppotK = [NSString new];
         for (btnbadgevalue *btn in self.tools.subviews) {
-            NSString *suppotK = [NSString new];
+            
             if (btn.tag == btnSuppot) {
                 if (model.popularity > 1000) {
                     float suppot = model.popularity/1000;
@@ -320,16 +333,16 @@ const CGFloat topviewhw = 350;
 }
 #pragma mark - UIWebView代理
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
-//     NSURLRequest *res = [NSURLRequest requestWithURL:[NSURL URLWithString:self.urls]];
+
  
     NSString *ss = [NSString stringWithFormat:@"%@",request.URL];
     /**
      *  这个地方处理点击文章链接跳转，顶图不消失
      */
     if ([ss isEqualToString:@"about:blank"]) {
-        self.storyImage.hidden = NO;
+        self.toptitle.hidden = NO;
     }else {
-        self.storyImage.hidden = YES;
+        self.toptitle.hidden = YES;
     }
 
     return YES;
@@ -350,13 +363,41 @@ const CGFloat topviewhw = 350;
  */
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     CGFloat offsetY = scrollView.contentOffset.y;
-    CGFloat offsetDo= topviewhw + self.storyImage.frame.origin.y -20;
+    CGFloat offsetDo= 200;
     if (offsetY >= offsetDo) {
         self.shadow.hidden = NO;
     }else{
         self.shadow.hidden = YES;
     }
+    NSLog(@"%@",NSStringFromCGPoint(scrollView.contentOffset));
 
+//    if (offsetY < -131) {
+////        scrollView.bounces = NO;
+//        scrollView.contentOffset = CGPointMake(0, -131);
+//    }
+    if (offsetY > 0) {
+        
+    }else if(offsetY < -85  ){
+        scrollView.contentOffset = CGPointMake(0, -85);
+    }else{
+        CGFloat delta = 0.0f;
+        CGRect rect = CGRectMake(0, 0, self.toptitle.width, 200);
+        delta = offsetY;
+        rect.origin.y += delta;
+        rect.size.height -= delta;
+        self.toptitle.frame  = rect;
+//        self.storyImage.alpha.frame =rect;
+        self.toptitle.clipsToBounds = YES;
+        NSLog(@"delta%f",delta);
+    }
+    NSLog(@"contenssize%@",NSStringFromCGRect(self.toptitle.frame));
+}
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+//    self.news.scrollView.con
+    NSLog(@"contenssize%@",NSStringFromCGPoint(self.news.scrollView.contentOffset) );
+}
+-(void)scrollViewDidScrollToTop:(UIScrollView *)scrollView{
+    NSLog(@"top");
 }
 -(void)dealloc{
     [[NSNotificationCenter defaultCenter] removeObserver:self];
